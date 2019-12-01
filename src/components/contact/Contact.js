@@ -1,30 +1,41 @@
 import React, { useState } from 'react';
+import styles from './Contact.css';
+import github from '../../assets/github.png';
+import linkedin from '../../assets/linkedin.png';
 
 const Contact = () => {
   const [phoneHidden, setPhoneHidden] = useState(true);
   const [emailHidden, setEmailHidden] = useState(true);
 
   return (
-    <>
-      <a 
-        href="https://github.com/evanandrewson" 
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="https://miro.medium.com/max/1125/1*aFHTAkhTkyWD93-UGRttPw.png" />
-      </ a>
-      <a 
-        href="https://www.linkedin.com/in/evan-andrewson/" 
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/1280px-LinkedIn_Logo.svg.png" />
-      </ a>
-      <h1>971-940-4647</h1>
-      <button onClick={() => setPhoneHidden(!phoneHidden)}>{phoneHidden ? 'Show' : 'Hide' } Phone Number</button>
-      <h1>evanandrewson@gmail.com</h1>
-      <button onClick={() => setEmailHidden(!emailHidden)}>{emailHidden ? 'Show' : 'Hide' } Email</button>
-    </>
+    <div className={styles.Contact}>
+      <div className={styles.imgContainer}>
+        <a 
+          href="https://github.com/evanandrewson" 
+          target="_blank"
+          rel="noopener noreferrer"   
+        >
+          <img className={styles.github} src={github} />
+        </ a>
+        <a 
+          href="https://www.linkedin.com/in/evan-andrewson/" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className={styles.linkedIn} src={linkedin} />
+        </ a>
+      </div>
+      <section className={styles.container}>
+        <div>
+          <button onClick={() => setPhoneHidden(!phoneHidden)}>{phoneHidden ? 'Show' : 'Hide' } Phone Number</button>
+          {!phoneHidden && <h1>971-940-4647</h1>}
+        </div>
+        <div>
+          <button onClick={() => setEmailHidden(!emailHidden)}>{emailHidden ? 'Show' : 'Hide' } Email</button>
+          {!emailHidden && <h1>evanandrewson@gmail.com</h1>}
+        </div>
+      </section>
+    </div>
   );
 };
 
