@@ -1,5 +1,12 @@
 .Header {
     display: flex;
+    background-color: #373537;
+    color: white;
+    height: 15vh;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 2em;
+    box-sizing: border-box;
+    margin: 0;
 
     .headerText {
         display: flex;
@@ -13,8 +20,9 @@
         font-size: 5em;
         margin: 0;
     }
+}
 
-    nav {
+ nav {
         justify-content: flex-start;
         display: flex;
         flex-direction: column;
@@ -23,6 +31,6 @@
     }
     
     a {
-        margin: 5px
+        margin: .5em 0 .5em 1em;
+        color: white;
     }
-}

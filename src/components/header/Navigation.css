@@ -1,0 +1,14 @@
+.Navigation {
+    nav {
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+    }
+    
+    a {
+        margin: .5em 0 .5em 1em;
+        color: white;
+    }
+}

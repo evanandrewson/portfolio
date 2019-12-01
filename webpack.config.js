@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({ template: './src/index.html' }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
@@ -59,6 +59,17 @@ module.exports = {
           loader: 'url-loader',
           options: { limit: 1000 },
         },
+      },
+      {
+        test: /\.(svg|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   }

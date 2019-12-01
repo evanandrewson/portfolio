@@ -1,21 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Header.css';
+import Navigation from './Navigation';
+
 
 const Header = () => {
   return (
-    <div className={styles.Header}>
-      <nav>
-        <Link to='/'>About</ Link>
-        <Link to='/projects'>Projects</ Link>
-        <Link to='/resume'>Resume</ Link>
-        <Link to='/contact'>Contact</ Link>
-      </nav>
-      <section className={styles.headerText}>
-        <h1>Evan Andrewson</h1>
-        <p>Software Developer</p>
-      </section>
-    </div>
+    <>
+      <div className={styles.Header}>
+        <Navigation />
+        <section className={styles.headerText}>
+          <h1>EVAN ANDREWSON</h1>
+          <p>SOFTWARE DEVELOPER</p>
+        </section>
+      </div>
+    </>
   );
 };
 

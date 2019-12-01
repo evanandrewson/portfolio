@@ -1,4 +1,20 @@
 .Contact {
+    padding-top: 10em;
+    height: 85vh;
+    font-family: 'Oswald', sans-serif;
+    background-image: url(https://images.pexels.com/photos/979515/pexels-photo-979515.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    border-radius: 2em;
+    box-sizing: border-box;
+
+    .content {
+        background-color: #f1f2d5; 
+        border-radius: 2em;
+        width: 50vw;
+        margin: auto;
+        padding: 2em;
+    }
+
     .imgContainer {
         display: flex;
         flex-direction: column;
@@ -21,6 +37,12 @@
             text-align: center;
             width: 8em;
             height: 2.8em;
+            background-color: #373537;
+            color: white;
+            border-radius: 2em;
+        }
+        button:hover {
+            background-color: black;
         }
     }
 }
