@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <>
       <div className={styles.Header}>
-        <Navigation />
         <section className={styles.headerText}>
           <h1>EVAN ANDREWSON</h1>
           <p>SOFTWARE DEVELOPER</p>
         </section>
+        <Navigation />
       </div>
     </>
   );

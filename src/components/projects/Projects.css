@@ -1,0 +1,21 @@
+.Projects {
+    img {
+        height: 22.5vh;
+        border-radius: 2em;
+    }
+    section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.75vh;
+        padding: 1vh;
+        border: 3px solid #373537;
+
+        div {
+            margin: auto;
+            font-size: 1.5em;
+        }
+    }
+    a {
+        color: black;
+    }
+}
